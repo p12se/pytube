@@ -83,7 +83,7 @@ class YouTube(object):
         """
         if not self._filename:
             self._filename = safe_filename(self.title)
-        return self._filename
+        return self._filename.encode('latin1').decode('utf8')
 
     @filename.setter
     def filename(self, filename):
